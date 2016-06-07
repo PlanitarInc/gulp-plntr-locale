@@ -1,4 +1,4 @@
-# gulp-plntr-locale [![NPM version](https://badge.fury.io/js/gulp-plntr-locale.png)](http://badge.fury.io/js/gulp-plntr-locale) [![Build Status](https://travis-ci.org/PlanitarInc/gulp-plntr-locale.png)](https://travis-ci.org/PlanitarInc/gulp-plntr-locale)
+# gulp-plntr-locale [![NPM version](https://badge.fury.io/js/gulp-plntr-locale.png)](http://badge.fury.io/js/gulp-plntr-locale) [![Build Status](https://travis-ci.org/PlanitarInc/gulp-plntr-locale.svg?branch=master)](https://travis-ci.org/PlanitarInc/gulp-plntr-locale)
 
 gulp-plntr-locale is a [Gulp](https://github.com/gulpjs/gulp) plugin that
 converts YAML localization files to Planitar angular Locale services.
