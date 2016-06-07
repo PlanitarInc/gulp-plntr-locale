@@ -1,0 +1,44 @@
+{
+  "name": "gulp-plntr-locale",
+  "version": "0.0.1",
+  "description": "Converts YAML localization files to Planitar angular Locale services",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tracker1/gulp-header.git"
+  },
+  "bugs": "git@github.com:PlanitarInc/gulp-json-angular-translate.gitissues",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [
+    "plntr",
+    "plntr-locale",
+    "gulpplugin",
+    "eventstream"
+  ],
+  "author": {
+    "name": "Planitar",
+    "url": "http://github.com/PlanitarInc"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bufferstreams": "^1.1.0",
+    "gulp-util": "*",
+    "js-beautify": "^1.6.3",
+    "js-yaml": "^3.6.1",
+    "multiline": "^1.0.2",
+    "object-assign": "*",
+    "through2": "^2.0.0",
+    "to-single-quotes-shahata": "^0.3.0"
+  },
+  "devDependencies": {
+    "event-stream": "^3.1.7",
+    "gulp": "^3.9.0",
+    "mocha": "*",
+    "should": "*",
+    "vinyl": "*"
+  }
+}
