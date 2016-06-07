@@ -1,5 +1,6 @@
 'use strict';
 
+var path = require('path');
 var through = require('through2');
 var gutil = require('gulp-util');
 var extend = require('object-assign');
@@ -34,7 +35,7 @@ module.exports = function (options) {
     extractLanguage = options.extractLanguage;
   } else {
     extractLanguage = function (filepath) {
-      return filepath.match(options.extractLanguage)[0];
+      return path.basename(filepath).match(options.extractLanguage)[0];
     };
   }
 
