@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "event-stream": "^4.0.1",
+    "event-stream": "3.3.4",
     "gulp": "^4.0.0",
     "gulp-util": "*",
     "vinyl": "^2.2.0"
@@ -40,7 +40,7 @@
     "to-single-quotes-shahata": "^0.3.0"
   },
   "devDependencies": {
-    "event-stream": "^4.0.1",
+    "event-stream": "3.3.4",
     "gulp": "^4.0.0",
     "gulp-util": "*",
     "mocha": "*",
