@@ -115,5 +115,5 @@ function createLocaleService(buffer, options) {
     text: toSingleQuotes(JSON.stringify(obj)),
   }));
 
-  return new Buffer(jb(src, {'indent_size': 2, 'jslint_happy': true}));
+  return Buffer.from(jb(src, {'indent_size': 2, 'jslint_happy': true}));
 }

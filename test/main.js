@@ -18,9 +18,9 @@ describe('gulp-plntr-locale', function () {
 
     var _createFile = function (contents, filename) {
       if (typeof contents === 'string') {
-        contents = new Buffer(contents, 'utf8');
+        contents = Buffer.from(contents, 'utf8');
       } else if (Array.isArray(contents)) {
-        contents = new Buffer(contents.join('\n'), 'utf8');
+        contents = Buffer.from(contents.join('\n'), 'utf8');
       }
       return new File({
         cwd: './',
