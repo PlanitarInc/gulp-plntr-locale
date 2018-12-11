@@ -1,6 +1,6 @@
 {
   "name": "gulp-plntr-locale",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Converts YAML localization files to Planitar angular Locale services",
   "repository": {
     "type": "git",
