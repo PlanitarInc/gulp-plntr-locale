@@ -24,9 +24,14 @@
     "url": "http://github.com/PlanitarInc"
   },
   "license": "MIT",
+  "peerDependencies": {
+    "event-stream": "^4.0.1",
+    "gulp": "^4.0.0",
+    "gulp-util": "*",
+    "vinyl": "^2.2.0"
+  },
   "dependencies": {
     "bufferstreams": "^2.0.1",
-    "gulp-util": "*",
     "js-beautify": "^1.6.3",
     "js-yaml": "^3.6.1",
     "multiline": "^2.0.0",
@@ -37,6 +42,7 @@
   "devDependencies": {
     "event-stream": "^4.0.1",
     "gulp": "^4.0.0",
+    "gulp-util": "*",
     "mocha": "*",
     "should": "*",
     "vinyl": "^2.2.0"
