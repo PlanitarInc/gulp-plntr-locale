@@ -4,7 +4,7 @@
 
 var plntrLocale = require('../');
 var assert = require('assert');
-var gutil = require('gulp-util');
+var PluginError = require('plugin-error');
 var path = require('path');
 var es = require('event-stream');
 var File = require('vinyl');
@@ -109,7 +109,7 @@ angular.module('moda')
       var stream = plntrLocale();
 
       stream.once('error', function(err) {
-        assert.ok(err instanceof gutil.PluginError);
+        assert.ok(err instanceof PluginError);
         done();
       });
 
@@ -121,7 +121,7 @@ angular.module('moda')
       var stream = plntrLocale();
 
       stream.once('error', function(err) {
-        assert.ok(err instanceof gutil.PluginError);
+        assert.ok(err instanceof PluginError);
         done();
       });
 
@@ -137,7 +137,7 @@ angular.module('moda')
       var stream = plntrLocale({safe: true});
 
       stream.once('error', function(err) {
-        assert.ok(err instanceof gutil.PluginError);
+        assert.ok(err instanceof PluginError);
         done();
       });
 
@@ -246,7 +246,7 @@ angular.module('moda')
       var stream = plntrLocale();
 
       stream.once('error', function (err) {
-        assert.ok(err instanceof gutil.PluginError);
+        assert.ok(err instanceof PluginError);
         done();
       });
 
@@ -258,7 +258,7 @@ angular.module('moda')
       var stream = plntrLocale();
 
       stream.once('error', function (err) {
-        assert.ok(err instanceof gutil.PluginError);
+        assert.ok(err instanceof PluginError);
         done();
       });
 
@@ -274,7 +274,7 @@ angular.module('moda')
       var stream = plntrLocale({safe: true});
 
       stream.once('error', function (err) {
-        assert.ok(err instanceof gutil.PluginError);
+        assert.ok(err instanceof PluginError);
         done();
       });
 
@@ -288,7 +288,7 @@ angular.module('moda')
       var stream = plntrLocale();
 
       stream.once('error', function (err) {
-        assert.ok(err instanceof gutil.PluginError);
+        assert.ok(err instanceof PluginError);
         done();
       });
 

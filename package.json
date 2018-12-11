@@ -27,7 +27,9 @@
   "peerDependencies": {
     "event-stream": "3.3.4",
     "gulp": "^4.0.0",
-    "gulp-util": "*",
+    "lodash.template": "^4.4.0",
+    "plugin-error": "^1.0.1",
+    "replace-ext": "^1.0.0",
     "vinyl": "^2.2.0"
   },
   "dependencies": {
@@ -42,8 +44,10 @@
   "devDependencies": {
     "event-stream": "3.3.4",
     "gulp": "^4.0.0",
-    "gulp-util": "*",
+    "lodash.template": "^4.4.0",
     "mocha": "*",
+    "plugin-error": "^1.0.1",
+    "replace-ext": "^1.0.0",
     "should": "*",
     "vinyl": "^2.2.0"
   }

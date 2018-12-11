@@ -2,7 +2,9 @@
 
 var path = require('path');
 var through = require('through2');
-var gutil = require('gulp-util');
+var PluginError = require('plugin-error');
+var replaceExt = require('replace-ext');
+var template = require('lodash.template');
 var extend = require('object-assign');
 var yaml = require('js-yaml');
 var BufferStreams = require('bufferstreams');
@@ -43,7 +45,7 @@ module.exports = function (options) {
 
     if (file.isBuffer()) {
       if (file.contents.length === 0) {
-        this.emit('error', new gutil.PluginError(PLUGIN_NAME,
+        this.emit('error', new PluginError(PLUGIN_NAME,
           'File ' + file.path + ' is empty'));
         return cb();
       }
@@ -54,9 +56,9 @@ module.exports = function (options) {
           moduleName: options.moduleName,
           language: extractLanguage(file.path),
         });
-        file.path = gutil.replaceExtension(file.path, '.js');
+        file.path = replaceExt(file.path, '.js');
       } catch (error) {
-        this.emit('error', new gutil.PluginError(PLUGIN_NAME,
+        this.emit('error', new PluginError(PLUGIN_NAME,
           error, {showStack: true}));
         return cb();
       }
@@ -70,13 +72,13 @@ module.exports = function (options) {
       var _this = this;
       var streamer = new BufferStreams(function(err, buf, cb) {
         if (err) {
-          _this.emit('error', new gutil.PluginError(PLUGIN_NAME,
+          _this.emit('error', new PluginError(PLUGIN_NAME,
             err, {showStack: true}));
           return;
         }
 
         if (buf.length === 0) {
-          _this.emit('error', new gutil.PluginError(PLUGIN_NAME,
+          _this.emit('error', new PluginError(PLUGIN_NAME,
             'File ' + file.path + ' is empty'));
           return;
         }
@@ -87,10 +89,10 @@ module.exports = function (options) {
             moduleName: options.moduleName,
             language: extractLanguage(file.path),
           });
-          file.path = gutil.replaceExtension(file.path, '.js');
+          file.path = replaceExt(file.path, '.js');
           cb(null, parsed);
         } catch (error) {
-          _this.emit('error', new gutil.PluginError(PLUGIN_NAME,
+          _this.emit('error', new PluginError(PLUGIN_NAME,
             error, {showStack: true}));
           return;
         }
@@ -111,7 +113,7 @@ module.exports = function (options) {
 function createLocaleService(buffer, options) {
   var obj = yaml.safeLoad(buffer.toString('utf8'));
 
-  var src = gutil.template(templateStr, extend(options, {
+  var src = template(templateStr)(extend(options, {
     text: toSingleQuotes(JSON.stringify(obj)),
   }));
 
